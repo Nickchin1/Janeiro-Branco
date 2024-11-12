@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 28% 70% 20%;
+    grid-template-areas: "header header header"
+                          "main main main"
+                          "footer footer footer";
+}
+
+header {
+    background-color: #607d8b; 
+    grid-area: header;
+    align-items: center;
+}
+
+.pesquisa {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.pesquisa-input {
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    width: 300px;
+    outline: none;
+    border-radius: 20px;
+    padding-left: 3px;
+
+}
+
+.pesquisa-button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    transform: translate(-30px, -10px);
+
+    width: 1px;
+    height: 1px;
+}
+
+.pesquisa-input:focus {
+    border: 2px solid #607d8b2d;
+}
+
+header > .itensMeio {
+    display: flex;  
+    width: 800px;
+    height: 300px;
+    padding:0px;
+    transform: translate(350px, -40px);
+
+}
+
+.itensMeio > h1 {
+    padding: 60px;
+}
+
+header > .iconesLaterais {
+    width: 150px;
+    transform: translate(1250px, -50px);
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    background-color: #607d8b;
+    grid-area: footer;
+}
