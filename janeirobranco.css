@@ -1,78 +1,99 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-body {
+
+
+.container {
     display: grid;
-    grid-template-rows: 28% 70% 20%;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 80% 0% 80%;
     grid-template-areas: "header header header"
-                          "main main main"
-                          "footer footer footer";
+    "left main right"
+    "footer footer footer";
 }
 
 header {
-    background-color: #607d8b; 
+    background: linear-gradient(to bottom, #01192f, #607d8b);
     grid-area: header;
     align-items: center;
 }
 
-.pesquisa {
+nav {
+    padding-left: 50px;
+    padding-top: 30px;
+
+}
+
+.search {
     display: flex;
     justify-content: left;
     align-items: center;
     border-radius: 25px;
-    background-color: rgb(255, 255, 255);
+   
 
     width: 300px;
-    margin-top: 30px;
-    margin-left: 50px;
+
 }
 
-.pesquisa-input {
+.search-input {
+    background-color: rgba(255, 255, 255, 0.623);
     border: none;
     padding: 10px;
     font-size: 14px;
     width: 300px;
     outline: none;
     border-radius: 20px;
-    padding-left: 3px;
+    margin: 5px;
 
 }
 
-.pesquisa-button {
-    background-color: rgb(255, 255, 255);
+.search-button {
+    background-color:  rgba(255, 255, 255, 0);
     border: none;
-    transform: translate(-30px, -10px);
-
-    width: 1px;
-    height: 1px;
-}
-
-.pesquisa-input:focus {
-    border: 2px solid #607d8b2d;
-}
-
-header > .itensMeio {
-    display: flex;  
-    width: 800px;
-    height: 300px;
-    padding:0px;
-    transform: translate(350px, -40px);
+    transform: translate(-37px, 2px);
 
 }
 
-.itensMeio > h1 {
-    padding: 60px;
+.mid {
+    display: flex;
+    height: 400px;
 }
 
-header > .iconesLaterais {
-    width: 150px;
+#img1 {
+    margin-left: 240px;
+    padding-bottom: 50px;
+}
+
+#title {
+    padding-top: 100px;
+}
+
+.icon {
+    padding-left: 80px;
+    padding-top: 7px;
     transform: translate(1250px, -50px);
+}
+
+.icon > button {
+    color: white;
+    background-color: #01192f00;
+    border: none;
+}
+
+#left {
+    grid-area: left;
+    background-color: rgba(128, 128, 128, 0.457);
 }
 
 main {
     grid-area: main;
+}
+
+#right {
+    grid-area: right;
+    background-color: rgba(128, 128, 128, 0.457);
 }
 
 footer {
