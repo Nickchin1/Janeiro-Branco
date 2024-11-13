@@ -1,0 +1,1 @@
+teste = document.getElementById("").value;
