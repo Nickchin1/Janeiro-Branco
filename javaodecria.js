@@ -7,7 +7,7 @@ function loadComments() {
     const comments = JSON.parse(localStorage.getItem('comments')) || [];
 
     // Exibe os comentários
-    comments.forEach(comment => {
+    comments.forEach((comment, index) => {
         const commentDiv = document.createElement("div");
         commentDiv.classList.add("comment");
 
@@ -23,9 +23,15 @@ function loadComments() {
         text.classList.add("text");
         text.textContent = comment.comment;
 
+        const deleteButton = document.createElement("button");
+        deleteButton.classList.add("delete");
+        deleteButton.textContent = "Excluir";
+        deleteButton.onclick = () => deleteComment(index);
+
         commentDiv.appendChild(author);
         commentDiv.appendChild(email);
         commentDiv.appendChild(text);
+        commentDiv.appendChild(deleteButton);
 
         commentsSection.appendChild(commentDiv);
     });
@@ -58,6 +64,21 @@ function saveComment(event) {
     document.getElementById("commentForm").reset();
 
     // Atualiza a lista de comentários
+    loadComments();
+}
+
+// Função para excluir um comentário
+function deleteComment(index) {
+    // Recupera os comentários existentes
+    const comments = JSON.parse(localStorage.getItem('comments')) || [];
+
+    // Remove o comentário pelo índice
+    comments.splice(index, 1);
+
+    // Atualiza o localStorage
+    localStorage.setItem('comments', JSON.stringify(comments));
+
+    // Recarrega os comentários para refletir a exclusão
     loadComments();
 }
 
