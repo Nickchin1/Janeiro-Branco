@@ -95,48 +95,33 @@
                         de forma mais saudável e equilibrada...
                 </div>
             </div>
-            <div class="cards"><!--cards-->
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Comentário Anônimo</h5>
-                        <p class="card-text">Eu nunca imaginei que um site pudesse me ajudar tanto, mas os profissionais
-                            daqui realmente fizeram a diferença. Me senti acolhido em cada conversa e, graças ao apoio
-                            que
-                            recebi, estou me sentindo mais confiante para enfrentar os desafios do meu dia a dia.
-                            Recomendo demais!</p>
+                </div>
+                <div class="container">
+                    <h1>Deixe seu Comentário</h1>
+            
+                    <!-- Formulário de Comentários -->
+                    <form id="commentForm">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                        
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            
+                        <label for="comment">Comentário:</label>
+                        <textarea id="comment" name="comment" rows="4" placeholder="Escreva seu comentário" required></textarea>
+            
+                        <label>
+                            <input type="checkbox" id="anonymous" name="anonymous"> 
+                            Comentário Anônimo
+                        </label>
+            
+                        <button type="submit">Enviar Comentário</button>
+                    </form>
+            
+                    <div id="commentsSection">
+                        <!-- Comentários serão carregados aqui -->
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Comentário Anônimo</h5>
-                        <p class="card-text">Desde sempre, senti a pressão para ser perfeito e atender às expectativas
-                            dos outros. Aprendi que a pressão social, embora muitas vezes invisível, pode
-                            ser um grande peso.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Comentário Anônimo</h5>
-                        <p class="card-text">Acredito que sites como este são fundamentais para desmistificar o
-                            estigma em torno da psicologia e tornar o cuidado psicológico mais acessível e
-                            normalizado para todos.</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="comentarios">
-                <h2>Faça um relato/desabafo: </h2>
-                <form>
-                    <input type="text" name="nome" id="nome" placeholder="Escreva seu nome">
-                    <input type="email" name="email" id="email" placeholder="Email">
-                    <textarea name="comentario" id="cmt" placeholder="Escreva seu relato: "></textarea>
-                    
-                </form>
-                <button  onclick="mostrar()">Enviar comentário</button>
-                <div id="com">
-
-                </div>
-            </div>
     </div>
     </div>
     </main>
