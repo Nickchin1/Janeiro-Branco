@@ -1,1 +1,1 @@
-file:///C:/Users/nicko/Documents/GitHub/AtividadeHTML/Janeiro-Branco/index.html
+https://nickchin1.github.io/Janeiro-Branco/
